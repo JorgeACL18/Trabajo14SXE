@@ -10,34 +10,37 @@ Antes de empezar, tenemos que crear la base de datos en PostgreSQL y luego, una 
 
 ---
 
-## Apartado 1: Creación de Tablas Personalizadas
+## Apartado 1
+En este primer paso, creamos la tabla `"EmpresasFCT"`, añadiéndole los campose de "idEmpresa", "nombre", "quiereAlumnos", "numAlumnos" y "fechaContacto":
 
-En este primer paso, creamos la tabla `EmpresasFCT`
+<img width="584" height="367" alt="Captura desde 2026-02-13 09-13-36" src="https://github.com/user-attachments/assets/e0aee906-a0bb-4231-866d-83feabfe0fbc" />
 
-## Apartado 2: Población de Datos
-Una vez definida la estructura, se han insertado cinco registros representativos mediante la sentencia `INSERT INTO`. Los datos son ficticios y sirven para validar que los tipos de datos (booleanos, enteros y fechas) funcionan correctamente.
+## Apartado 2
+Ahora, con la empresa ya creada, introducimos los datos de empresas inventadas:
 
-## Apartado 3: Consulta de Gestión de Empresas
-Se ha realizado una consulta de selección simple para listar todas las empresas de la nueva tabla. El orden de los resultados se ha establecido de forma descendente basándose en la fecha de contacto, permitiendo visualizar primero las interacciones más recientes.
+<img width="646" height="491" alt="Captura desde 2026-02-13 09-33-02" src="https://github.com/user-attachments/assets/f1da6fa4-ed36-4cfc-9cdf-7dc6ca555172" />
 
-## Apartado 4: Filtrado de Contactos en Odoo
-Este apartado requiere trabajar con la tabla nativa `res_partner`. Hemos filtrado los registros para obtener únicamente personas físicas (contactos) que no pertenezcan a la ciudad de **Tracy**.
+## Apartado 3
+Para este apartado, tenemos que hacer una consulta que muestr estos datos en una tabla y que los ordene por fechaContacto:
 
-* Se ha utilizado un `LEFT JOIN` para vincular el contacto con su empresa padre.
-* Los resultados se presentan ordenados alfabéticamente por el nombre comercial de la empresa asociada.
+<img width="646" height="570" alt="Captura desde 2026-02-13 09-33-20" src="https://github.com/user-attachments/assets/ba9e0475-4682-4cc6-82f5-4acf007ff079" />
 
-## Apartado 5: Análisis de Reembolsos de Proveedores
-Utilizando la tabla `account_move`, hemos extraído un listado de facturas rectificativas de proveedor (tipo `in_refund`). Esta consulta es vital para el control contable de devoluciones.
+## Apartado 4
+Con el módulo de "Facturación" instalado, ahora tenemos que obtener el listado de todos los contactos de Odoo por su Nombre, Ciudad que no sea Tracy y Nombre comercial de la empresa:
 
-* Se muestran campos clave como el número de factura y el total sin impuestos.
-* El listado se organiza cronológicamente, priorizando las facturas más nuevas.
+<img width="646" height="851" alt="Captura desde 2026-02-13 09-43-03" src="https://github.com/user-attachments/assets/56ff763c-2dde-4162-bf26-edd02db71c6a" />
 
-## Apartado 6: Segmentación de Clientes por Volumen
-En este ejercicio hemos aplicado funciones de agregado para identificar clientes recurrentes. Se han filtrado únicamente facturas de venta confirmadas (`posted`).
+## Apartado 5
+Con los datos de "Facturación", tenemos que listar las empresas que han emitido algún reembolso:
 
-* Se ha empleado la cláusula `GROUP BY` sobre el nombre de la empresa.
-* Se ha utilizado `HAVING` para filtrar solo aquellos clientes que superan el umbral de dos facturas emitidas.
+<img width="646" height="538" alt="Captura desde 2026-02-13 09-51-42" src="https://github.com/user-attachments/assets/4a993287-6616-4b38-b8c5-e19d76b190a2" />
 
-## Apartado 7: Actualización Masiva de Dominios
-Finalmente, se ha ejecutado una sentencia de actualización (`UPDATE`) para modificar los correos electrónicos de los contactos. Se ha reemplazado el dominio `@bilbao.example.com` por el nuevo dominio corporativo `@bilbao.bizkaia.neus`.
+## Apartado 6
+Con los mismos datos de antes, ahora tenemos que listar las empresas que han emitido más de dos facturas de venta:
 
+<img width="646" height="538" alt="Captura desde 2026-02-13 09-52-51" src="https://github.com/user-attachments/assets/a9ab6aca-9c5f-4893-82ae-24993dac67a1" />
+
+## Apartado 7
+Por último, tenemos que actualizar el correo de los contactos:
+
+<img width="646" height="538" alt="Captura desde 2026-02-13 09-53-33" src="https://github.com/user-attachments/assets/df443ae8-056a-4c93-b756-7dda3a089a51" />
