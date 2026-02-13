@@ -7,6 +7,8 @@ Antes de empezar, tenemos que crear la base de datos en PostgreSQL y luego, una 
 <img width="961" height="796" alt="Captura desde 2026-02-13 09-13-20" src="https://github.com/user-attachments/assets/413d664d-45da-4f09-b823-9c7ff510735a" />
 
 <img width="961" height="796" alt="Captura desde 2026-02-13 08-59-19" src="https://github.com/user-attachments/assets/9d1b3b00-5ead-4c84-b4ba-d43465f7b15b" />
+
+![Captura desde 2026-02-13 08-59-19.png](../../Im%C3%A1genes/Capturas%20de%20pantalla/Captura%20desde%202026-02-13%2008-59-19.png)
 ---
 
 ## Apartado 1: Creación de Tablas Personalizadas
