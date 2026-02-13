@@ -1,4 +1,4 @@
-# 🚀 Tarea 14: Gestión de Base de Datos en Odoo 18
+# Tarea 14: Gestión de Base de Datos
 
 En esta tarea tuvimos que montar, con docker compose, Odoo con PostgreSQL en el cual tuvimos que hacer lo que nos indicaba los distintos apartados del trabajo.
 
